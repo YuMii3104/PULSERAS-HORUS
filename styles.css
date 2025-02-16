@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulseras Horus</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #sobre-nosotros {
+            background: linear-gradient(to bottom, gold, white, gold);
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        #mision-vision {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #e9db5d;
+        }
+        
+        #mision-vision .mision, #mision-vision .vision {
+            width: 45%;
+            padding: 20px;
+            background-color: #e9ec0bef;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #mision-vision h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        #mision-vision p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #080808;
+        }
+        /* Estilos para la sección de inicio de sesión */
+#login {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#login-container h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+.link-container {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.link-container a {
+    color: black;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+}
+
+.link-container a:hover {
+    color: gold;
+}
+        #contacto {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        #contacto h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        #contacto p {
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        #contacto form {
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #contacto form label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+            text-align: left;
+        }
+        
+        #contacto form input, #contacto form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        #contacto form button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #contacto form button:hover {
+            background-color: gold;
+        }
+        
+        #contacto p strong {
+            font-weight: bold;
+        }
+        #catalogo {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        #catalogo h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .productos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .producto {
+            width: 30%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .producto:hover img {
+            transform: scale(1.1);
+        }
+        
+        .producto p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        
+        .btn-comprar {
+            background-color: #ffd700;
+            border: none;
+            padding: 10px 20px;
+            color: #000000;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-comprar:hover {
+            background-color: #e6a800;
+        }
+        #carrito {
+            padding: 40px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        #carrito .items-carrito {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        #carrito p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        #carrito .btn-pagar {
+            background-color: #28a745;
+            border: none;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        #carrito .btn-pagar:hover {
+            background-color: #218838;
+        }
+        #carrito .btn-pagar i {
+            margin-right: 10px; /* Espacio entre el ícono y el texto */
+            font-size: 1.5em;   /* Ajustar tamaño del ícono */
+        }
+    </style>
+</head>
